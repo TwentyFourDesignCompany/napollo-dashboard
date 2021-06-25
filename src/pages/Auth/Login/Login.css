@@ -1,0 +1,30 @@
+.login-main {
+  min-width: 100vw;
+  min-height: 100vh;
+}
+.login1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 4rem; */
+}
+.login-img {
+  width: 25rem;
+  height: 25rem;
+  border-radius: 25rem / 2;
+}
+.login2 {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: center;
+  align-items: center;
+  /* padding: 4rem; */
+}
+.login-btn {
+  align-self: center !important;
+  width: 50%;
+}
+/* .login-img{
+    width: 4rem;
+    height: 4rem;
+} */

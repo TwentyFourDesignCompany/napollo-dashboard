@@ -1,0 +1,33 @@
+.box {
+  display: block;
+  width: 20px;
+  height: 20px;
+  justify-content: center !important;
+  align-items: center !important;
+  outline: none !important;
+  cursor: pointer !important;
+  color: #fff;
+  border-radius: 3px !important;
+  background-color: transparent !important;
+  border: 1.5px solid #c4c4c4;
+  margin-right: 10px;
+  display: flex;
+}
+.box:focus {
+  outline: none !important;
+}
+.box.active {
+  border: 1.5px solid #feee3e !important;
+}
+.checkbox-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* justify-content: center; */
+}
+.checked-box {
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  background-color: #feee3e;
+}

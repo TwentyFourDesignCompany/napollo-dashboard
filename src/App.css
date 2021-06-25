@@ -1,38 +1,18 @@
-.App {
-  text-align: center;
+.font-ExtraBold {
+  font-family: "Helvetica-ExtraBold";
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.font-Bold {
+  font-family: "Helvetica-Bold";
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.font-Medium {
+  font-family: "Helvetica-Medium";
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.font-Regular {
+  font-family: "Helvetica-Regular";
 }
-
-.App-link {
-  color: #61dafb;
+.font-Light {
+  font-family: "Helvetica-Light";
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.font-ExtraLight {
+  font-family: "Helvetica-ExtraLight";
 }
