@@ -4,7 +4,8 @@ import "./CustomBtn.css";
 const CustomBtn = (props) => {
   return (
     <button
-      onClick={() => props.onClick()}
+      type={props.type}
+      onClick={props.onClick ? () => props.onClick() : null}
       className={
         props.className ? `custom-btn ${props.className}` : "custom-btn"
       }

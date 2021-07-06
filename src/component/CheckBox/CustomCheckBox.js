@@ -9,12 +9,12 @@ const CustomCheckBox = (props) => {
         props.className ? `checkbox-btn ${props.className}` : "checkbox-btn"
       }
     >
-      <btn
+      <button
         onClick={() => props.checked()}
         className={props.check === true ? `box active` : `box`}
       >
         {props.check === true ? <div className="checked-box"></div> : null}
-      </btn>
+      </button>
       <CustomText
         type="p"
         className={

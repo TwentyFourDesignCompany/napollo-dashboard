@@ -3,18 +3,18 @@ import "./CustomInput.css";
 import Image from "../../../assets/images/user.svg";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
-const IconCont = ({type, toggle}) => {
+const IconCont = ({ type, toggle }) => {
   if (type) {
     return (
-      <btn className="icon-btn" onClick={() => toggle()}>
+      <button className="icon-btn" onClick={() => toggle()}>
         <FaRegEye className="text-white-main " />
-      </btn>
+      </button>
     );
   } else {
     return (
-      <btn className="icon-btn" onClick={() => toggle()}>
-        <FaRegEyeSlash className="text-white-main "  />
-      </btn>
+      <button className="icon-btn" onClick={() => toggle()}>
+        <FaRegEyeSlash className="text-white-main " />
+      </button>
     );
   }
 };
@@ -34,13 +34,24 @@ const CustomInput = (props) => {
     >
       {/* {props.children} */}
       <img src={props.image} alt="Logo" className="mr-3 block" />
-      <input
-        type={!show ? "password" : "text"}
-        placeholder={props.placeholder}
-        value={props.value}
-        onChange={props.onChange}
-        className="customInput font-Regular text-white-dim border-0"
-      />
+      {props.password ? (
+        <input
+          type={!show ? "password" : "text"}
+          placeholder={props.placeholder}
+          value={props.value}
+          onChange={props.onChange}
+          className="customInput font-Regular text-white-dim border-0"
+        />
+      ) : (
+        <input
+          type="text"
+          placeholder={props.placeholder}
+          value={props.value}
+          onChange={props.onChange}
+          className="customInput font-Regular text-white-dim border-0"
+        />
+      )}
+
       {props.showEyeIcon ? <IconCont type={show} toggle={toggleShow} /> : null}
     </div>
   );

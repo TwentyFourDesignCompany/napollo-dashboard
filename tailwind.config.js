@@ -7,6 +7,7 @@ module.exports = {
       primary: {
         bg: "#060715",
         main: "#192234",
+        light: "#101725",
       },
       secondary: {
         main: "#F68128",
@@ -17,6 +18,7 @@ module.exports = {
         light: "#eee",
         dim: "#C4C4C4",
       },
+      transparent: "transparent",
     },
   },
   variants: {
