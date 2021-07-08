@@ -5,7 +5,7 @@ import { navbarData } from "./NavbarData";
 import "./SingleNavItem.css";
 import { FaChevronRight, FaChevronDown } from "react-icons/fa";
 
-const SingleNavItem = ({ item }) => {
+const SingleNavItem = ({ item, closeSideBar }) => {
   const [subNav, setSubNav] = useState(false);
 
   const toggleSubNavState = () => setSubNav(!subNav);
@@ -18,7 +18,7 @@ const SingleNavItem = ({ item }) => {
         activeClassName="nav-active"
         to={item.path}
         key={item.path}
-        onClick={item.subNav && toggleSubNavState}
+        onClick={item.subNav ? toggleSubNavState : closeSideBar}
       >
         <div className="bg-transparent flex flex-row ">
           {item.icon}

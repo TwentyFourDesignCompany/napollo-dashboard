@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+/* @import "~react-vis/dist/style"; */
+
 @font-face {
   font-family: "Helvetica-Bold";
   src: local("font"), url("./assets/font/Helvetica-Bold.ttf") format("truetype");

@@ -14,7 +14,7 @@ const Navbar = () => {
   const [sideBar, setSideBar] = useState(false);
 
   const openSideBar = () => {
-    setSideBar(true);
+    setSideBar(!sideBar);
   };
   const closeSideBar = () => {
     setSideBar(false);
@@ -22,7 +22,11 @@ const Navbar = () => {
 
   return (
     <div className="navbar">
-      <div className="nav1 bg-primary-light ">
+      <div
+        className={
+          sideBar ? "nav1 bg-primary-light active" : "nav1 bg-primary-light "
+        }
+      >
         <div className="nav1-header w-full py-2 px-4 flex flex-row">
           <img src={MainLogo} className="main-logo" />
           <h2 className="font-Medium bg-transparent text-white-main text-2xl ml-3">
@@ -31,14 +35,21 @@ const Navbar = () => {
         </div>
         {window.innerWidth <= 768 && (
           <div className="nav-close-btn bg-transparent w-full ">
-            <FaTimes className="bg-transparent text-white-main text-2xl cursor-pointer" />
+            <FaTimes
+              className="bg-transparent text-white-main text-2xl cursor-pointer"
+              onClick={closeSideBar}
+            />
           </div>
         )}
 
         <div className="nav1-links lg:mt-16 bg-transparent">
           <nav className="navbar-links bg-transparent ">
             {navbarData.map((item, index) => (
-              <SingleNavItem item={item} key={index} />
+              <SingleNavItem
+                item={item}
+                key={index}
+                closeSideBar={closeSideBar}
+              />
             ))}
             {/* <SingleNavItem /> */}
           </nav>
@@ -50,8 +61,11 @@ const Navbar = () => {
         </div>
       </div>
       <div className="nav2  bg-primary-light flex flex-row  md:pl-5 pl-5 ">
-        <div className="sub-nav2-1 block">
-          <FaStream className="text-white-main text-2xl block" />
+        <div className="sub-nav2-1 block bg-transparent">
+          <FaStream
+            className="text-white-main text-2xl block bg-transparent"
+            onClick={openSideBar}
+          />
         </div>
         <div className="sub-nav2-2 bg-primary-light h-full">
           {window.innerWidth <= 768 ? (

@@ -9,7 +9,7 @@ const AdminDetailsView = () => {
       {window.innerWidth <= 768 ? (
         <></>
       ) : (
-        <div className="not-cont mr-5">
+        <div className="not-cont mr-14">
           <NotificationIcon className="bg-transparent" />
         </div>
       )}
@@ -49,7 +49,7 @@ const MyCustomDiv = styled.div`
   flex-direction: row;
 
   align-items: center;
-
+  justify-content: space-between;
   .not-cont {
     width: 10%;
     min-height: 65px !important;
@@ -67,7 +67,7 @@ const MyCustomDiv = styled.div`
     flex-direction: row;
     background: transparent;
     width: 95%;
-
+    // align-self: flex-end;
     .admin-img-cont {
       background: #444;
       width: 50px;

@@ -1,0 +1,14 @@
+.common-container {
+  width: 100vw !important;
+  min-height: 100vh !important;
+  padding-left: 21% !important;
+  padding-top: 70px !important;
+   background: #060715 !important;
+   /* overflow-x: hidden; */
+}
+@media screen and (max-width: 1000px) {
+  .common-container {
+    padding-left: 3% !important;
+    padding-top: 70px !important;
+  }
+}

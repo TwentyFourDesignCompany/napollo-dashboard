@@ -10,7 +10,9 @@
   top: 0 !important;
   position: fixed;
   border-radius: 2px;
-  transition: all 0.3 ease-in-out;
+  transition: all 0.5 ease-in-out;
+  z-index: 500;
+  transform: translateX(0%);
 }
 .nav2 {
   min-width: 79% !important;
@@ -22,6 +24,7 @@
   justify-content: space-between;
   align-items: center;
   transition: all 0.3 ease-in-out;
+   z-index: 400;
 }
 .main-logo {
   width: 40px;
@@ -82,10 +85,13 @@
   .nav1 {
     min-width: 0%;
     left: -100%;
+    transform: translateX(-200%);
+    transition: all 0.5 ease-in-out;
   }
-  .nav1.active {
+  .active {
     min-width: 20%;
     left: 0;
+    transform: translateX(0%);
   }
   .nav2 {
     width: 100% !important;
